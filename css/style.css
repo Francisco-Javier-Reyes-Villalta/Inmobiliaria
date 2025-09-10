@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*HEADER SUPERIOR*/
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+/*HEADER SUPERIOR*/
+.header__superior {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.logo img {
+    width: 250px;
+}
+
+/*BARRA MENU*/
+.container__menu {
+    width: 100%;
+    height: 70px;
+    background-color: #012942;
+    padding: 0px 20px;
+}
+
+.menu {
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav {
+    height: 100%;
+}
+
+nav > ul {
+    height: 100%;
+    display: flex;
+}
+
+nav > ul > li {
+    height: 100%;
+    list-style: none;
+}
+
+nav > ul > li:first-child > a {
+    background-image: url(../images/logotipo-inmobiliaria.svg);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover > a {
+    background-image: url(../images/logotipo-inmobiliaria.svg);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 300ms ease;
+}
+
+nav > ul > li > a:hover {
+    transform: scale(1.1);
+    background: #008ae0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#selected {
+    transform: scale(1.1);
+    background-color: #008ae0;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 720px) {
+    .header__superior {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 200px;
+    }
+
+    nav > ul {
+        flex-direction: column;
+        background-color: #0163ad;
+        position: fixed;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height: 300px;
+        transition: all 300ms ease;
+        z-index: 100;
+        /*opacity: 0;
+        *visibility: hidden;*/
+    }
+
+    nav > ul > li > a:hover {
+        transform: scale(1);
+    }
+
+    nav > ul > li:first-child a {
+        background-position: 20px;
+    }
+
+    #selected {
+        transform: scale(1);
+    }
+
+    6
+}
+
+.presentacion {
+  display: grid;
+}
+
+.presentacion > * {
+  grid-area: 1 / 1; /* todos los hijos ocupan la misma área */
+}
+
+.presentacion img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.presentacion .overlay {
+  background: rgba(0, 0, 0, 0.4); /* puedes cambiar color y opacidad */
+}
+
+.imagen-presentacion {
+    width: 100%;
+    height: 700px;
+    grid-area: 1 / 1;
+}
+
+.container-text {
+    grid-area: 1 / 1;
+    font-size: 5rem;
+    color: #0970b0;
+}
+
+.titulo-carousel {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 3rem;
+    color: #0163ad;
+}
+
+.slider-box { 
+    width: 100%;
+    max-width: 100%; /*cambiaste esto de px a %*/
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-box > ul {
+    display: flex;
+    padding: 0;
+    width: 600%; /*porque son 6 imágenes*/
+}
+
+.slider-box > ul > li {
+    width: 100%;
+    list-style: none;
+    position: relative;
+}
+
+.texto {
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 435px;
+    color: white;
+}
+
+.texto > h2 {
+    margin-bottom: 35px;
+}
+
+.slider-box > ul > li > img {
+    width: 90%;
+    list-style: none;
+    position: relative;
+    height: 90vh;
+    display: block;
+    margin:0 auto;
+    margin-bottom: 10px;
+}
+
+.boton-derecha > img {
+    width: 70px;
+    transition: all 0.3s;
+}
+
+.boton-derecha > img:hover {
+    cursor: pointer;
+    background: #004173ff;
+    border-radius: 15px;
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.boton-izquierda > img {
+    width: 70px;
+    transition: all 0.3s;
+}
+
+.boton-izquierda > img:hover {
+    cursor: pointer;
+    background: #004173ff;
+    border-radius: 15px;
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+.slider-box > ul > li > img{
+    width: 1250px;
+    display: block;
+}
+
+.boton {
+    padding: 10px;
+    margin-top: 5px;
+    background: rgb(15, 118, 197);
+    color: white;
+    border:1px solid #045b91;
+    font-size: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.boton:hover {
+    background: #012942;
+    transform: scale(1.09);
+    transition: all 0.3s;
+}
+
+.imagenes_accesos {
+    width: 90%;
+    max-width: 2100px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.acceso {
+    flex-direction: column; /* imagen arriba, texto abajo */
+    background: #90e0ef;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+.acceso img {
+    width: 100px;
+    transition: all 0.3s;
+}
+
+.acceso h2 {
+    font-size: 1.5rem;
+    color: #002b4d;
+}
+
+.acceso:hover {
+    transition: all 0.3s;
+    transform: scale(1.05);
+    cursor: pointer;
+    background: #58befd;
+}
+
+.acceso:hover > img {
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
+
+footer {
+    width: 100%;
+    min-height: 100px;
+    background: #012942;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.redes-sociales {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /*margin 10px 4px*/
+    /*flex-wrap wrap*/
+}
+
+.icono > img {
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s;
+}
+
+.icono > img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.menu {
+    display: flex;
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+.menu-elem {
+    margin: 10px 10px;
+}
+
+.menu-icon:hover {
+    color: #a5cff0;
+}
+
+.textoFooter {
+    color: white;
+    font-size: 1.2rem;
+}
