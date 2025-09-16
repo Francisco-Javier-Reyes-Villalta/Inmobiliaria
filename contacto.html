@@ -7,14 +7,83 @@
     <link rel="stylesheet" href="css/contacto.css">
 </head>
 <body>
-        <nav>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="ofertas.html">Ofertas</a></li>
-            <li><a href="alquilar.html">Alquilar</a></li>
-            <li><a href="terrenos.html">Terrenos</a></li>
-            <li><a href="residenciales.html">Residenciales</a></li>
-            <li><a href="">Contacto</a></li>
-            <img src="images/logo-inmobiliaria.svg" alt="">
-        </nav>
+    <div class="container__menu">
+
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label id="label__check" for="check__menu">
+                    <img src="images/barra-icono.svg" alt="" class="icon__menu">
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" id="selected" ></a></li>
+                        <li><a href="ofertas.html">Ofertas</a></li>
+                        <li><a href="alquilar.html">Alquiler</a></li>
+                        <li><a href="terrenos.html">Terrenos</a></li>
+                        <li><a href="residenciales.html">Recidenciales</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </div>
+    <div class="presentacion">
+            <div class="overlay"></div>
+        </div>
+
+    <div class="wrapper">
+        <div class="form-wrapper">
+            <form action="">
+                <h2>Contáctanos</h2>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Nombre</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" required>
+                    <label>Apellidos</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" required>
+                    <label>Correo Electrónico</label>
+                </div>
+                <div class="input-group">
+                    <input type="number" required>
+                    <label>Número de telefono</label>
+                </div>
+                <button type="submit" class="btn">Enviar Datos</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <ul class="redes-sociales">
+            <li class="icono-elem">
+                <a href="" class="icono">
+                    <img src="images/facebook icono.svg" alt="">
+                </a>
+            </li>
+            <li class="icono-elem">
+                <a href="" class="icono">
+                    <img src="images/whatsapp icono-2.svg" alt="">
+                </a>
+            </li>
+            <li class="icono-elem">
+                <a href="" class="icono">
+                    <img src="images/gmail icono-2.svg" alt="">
+                </a>
+            </li>
+        </ul>
+
+        <ul class="menu">
+            <li class="menu-elem"><a href="index.html" class="menu-icon">Inicio</a></li>
+            <li class="menu-elem"><a href="" class="menu-icon">Más información</a></li>
+            <li class="menu-elem"><a href="contacto.html" class="menu-icon">Contacto</a></li>
+        </ul>
+        <p class="textoFooter">@2025 | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/contacto.js"></script>
 </body>
 </html>
