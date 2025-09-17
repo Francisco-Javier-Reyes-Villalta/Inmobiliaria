@@ -1,17 +1,45 @@
-let atrasBtn = document.getElementById("atrasBtn")
-let adelanteBtn = document.getElementById("adelanteBtn")
-let scrollContainer = document.querySelector(".slider-box") //scrollContainer es donde estan todas las tarjetas
+let nextBtn = document.querySelector('.next')
+let prevBtn = document.querySelector('.prev')
 
-adelanteBtn.addEventListener('click', function() { //cuando haga click se va a activar la funcion tenemos que poner en la funcion que queremos que pase
-    scrollContainer.scrollBy({
-        left: 1250,
-        behavior: "smooth"
-    })
-})
+let slider = document.querySelector('.slider')
+let sliderList = slider.querySelector('.slider .list')
+let thumbnail = document.querySelector('.slider .thumbnail')
+let thumbnailItems = thumbnail.querySelectorAll('.item')
 
-atrasBtn.addEventListener('click',function() {
-    scrollContainer.scrollBy({
-        left: -1250,  // left de nuevo porque scroll no detecta a right como para moverse solo left
-        behavior: "smooth" // behavior es el comportamiento con el que va hacer scroll
-    })
-})
+thumbnail.appendChild(thumbnailItems[0])
+
+// Function for next button 
+nextBtn.onclick = function() {
+    moveSlider('next')
+}
+
+
+// Function for prev button 
+prevBtn.onclick = function() {
+    moveSlider('prev')
+}
+
+
+function moveSlider(direction) {
+    let sliderItems = sliderList.querySelectorAll('.item')
+    let thumbnailItems = document.querySelectorAll('.thumbnail .item')
+    
+    if(direction === 'next'){
+        sliderList.appendChild(sliderItems[0])
+        thumbnail.appendChild(thumbnailItems[0])
+        slider.classList.add('next')
+    } else {
+        sliderList.prepend(sliderItems[sliderItems.length - 1])
+        thumbnail.prepend(thumbnailItems[thumbnailItems.length - 1])
+        slider.classList.add('prev')
+    }
+
+
+    slider.addEventListener('animationend', function() {
+        if(direction === 'next'){
+            slider.classList.remove('next')
+        } else {
+            slider.classList.remove('prev')
+        }
+    }, {once: true}) // Remove the event listener after it's triggered once
+}
