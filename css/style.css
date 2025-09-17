@@ -530,7 +530,7 @@ footer {
 
 .redes-sociales {
     list-style: none;
-    display: flx;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -572,4 +572,5 @@ footer {
     font-size: 1.2rem;
 
 }
+
 
