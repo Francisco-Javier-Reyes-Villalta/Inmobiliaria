@@ -6,6 +6,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    overflow-x: hidden ;
+}
+
 /*HEADER SUPERIOR*/
 header {
     width: 100%;
@@ -307,3 +311,4 @@ footer {
     color: white;
     font-size: 1.2rem;
 }
+
