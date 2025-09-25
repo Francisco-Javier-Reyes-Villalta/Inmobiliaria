@@ -298,7 +298,7 @@ nav > ul > li > a:hover {
 /* Thumbnail Section  */
 .thumbnail{
     position: absolute;
-    bottom: 50px;
+    bottom: 10px;
     left: 50%;
     width: max-content;
     z-index: 100;
@@ -588,3 +588,4 @@ footer {
     color: white;
     font-size: 1.2rem;
 }
+
