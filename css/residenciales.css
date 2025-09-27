@@ -176,7 +176,7 @@ nav > ul > li > a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: clamp(10px, 1vw + 1rem, 40px);
     color: #2898ee;
     
 }
@@ -294,3 +294,4 @@ footer {
     color: white;
     font-size: 1.2rem;
 }
+
