@@ -170,8 +170,8 @@ nav > ul > li > a:hover {
 }
 
 .contenedor {
-  max-width: 600px;
-  margin: auto;
+  max-width: 800px;
+  margin: 20px auto;
   background-color: white;
   padding: 20px;
   border-radius: 8px;
