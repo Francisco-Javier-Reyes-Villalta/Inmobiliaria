@@ -124,7 +124,7 @@ nav > ul > li > a:hover {
 }
 
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 720px) { /*Esto es como una condicional, cuando el tamaño de la pantalla llegue a estos pixeles va a ocurrir lo del menu de telefono*/
     .header__superior {
         padding: 10px;
     }
@@ -138,7 +138,7 @@ nav > ul > li > a:hover {
         background-color: #0163ad;
         position: fixed;
         left: 0;
-        top: 158px;
+        top: 70px; /*para aunmentar o disminuir la altura del menu pequeño*/
         width: 100%;
         height: 0px;
         transition: all 300ms ease;
@@ -178,13 +178,12 @@ nav > ul > li > a:hover {
 }
 
 .presentacion .texto {
-    font-size: clamp (24px, 4vw + 4rem, 48px);
+    font-size: clamp(5px, 1vw + 1.5rem, 100px);
     color: #0f89d4;
     background: rgba(0, 0, 0, 0.5);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
     padding: 8px;
-    font-size: 2.5rem;
 }
 
 .presentacion > * {
@@ -580,4 +579,38 @@ footer {
 .textoFooter {
     color: white;
     font-size: 1.2rem;
+}
+
+@media screen and (max-width: 720px) {
+    .slider .list .item .content{
+    position: absolute;
+    top: 1px;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+    }
+
+    .nextPrevArrows{
+    position: absolute;
+    top: 90%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    }
+
+    .slider .list .item .content .title,
+    .slider .list .item .content .type{
+    font-size: clamp(52px ,1vw + 1rem, 80px); /*Para hacer que el texto del carousel sea responsive*/
+    font-weight: bold;
+    line-height: 1.3em;
+    }
 }
