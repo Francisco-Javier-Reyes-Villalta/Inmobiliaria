@@ -291,7 +291,7 @@ nav > ul > li > a:hover {
 /* Thumbnail Section  */
 .thumbnail{
     position: absolute;
-    bottom: 10px;
+    bottom: 47px;
     left: 50%;
     width: max-content;
     z-index: 100;
@@ -614,3 +614,4 @@ footer {
     line-height: 1.3em;
     }
 }
+
